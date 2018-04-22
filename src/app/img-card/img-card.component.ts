@@ -6,23 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./img-card.component.css']
 })
 export class ImgCardComponent implements OnInit {
-  private image: CatImage = {
-    message: 'Progressive Web Cat',
-    api: 'https://cataas.com/cat/says/',
-    fontsize: 40
-  };
+  count = 0;
   public src: string;
   ngOnInit() {
     this.generateSrc();
   }
+
   public generateSrc(): void {
-    this.src = this.image.api + this.image.message + '?size=' + this.image.fontsize + '&ts=' + Date.now();
+  this.count ++;
+  this.src = 'https://picsum.photos/200/300' + '&ts=' + this.count;
   }
   constructor() {}
-}
-
-class CatImage {
-  message: string;
-  api: string;
-  fontsize: number;
 }
