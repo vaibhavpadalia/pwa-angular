@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImgCardComponent implements OnInit {
   count = 0;
-  public src: string;
+  public src: string;z
   ngOnInit() {
     this.generateSrc();
   }

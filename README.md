@@ -1,27 +1,21 @@
-# Pwa Angular
+# Progressive Web App in Angular 5
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
+Create a **manifest.json** file and add it under the assets section in **.angular-cli.json**.
 
-## Development server
+Create a service worker _ngsw-config.json_ which are required to enable the creation of effective offline experiences.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Add a line under the **apps** section in **.angular-cli.json** :
 
-## Code scaffolding
+`"serviceWorker": true`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+You can manually create the files or use this command :
 
-## Build
+`ng new projectName --service-worker`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+This will enable, install, generate and register the service worker for our application.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<img src="src/assets/PWA.gif">
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
